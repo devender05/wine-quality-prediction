@@ -6,7 +6,7 @@ import pickle
 # -----------------------
 # Load Best Saved Model
 # -----------------------
-MODEL_PATH = "models/XGBoost.pkl"  # change to your best model
+MODEL_PATH = "XGBoost.pkl"  # change to your best model
 
 with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
@@ -66,3 +66,4 @@ if st.button("Predict Quality"):
     st.markdown("---")
     st.write("### Input Data")
     st.table(df_input)
+
