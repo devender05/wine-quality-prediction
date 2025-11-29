@@ -8,7 +8,7 @@ import seaborn as sns
 # -----------------------
 # Load Best Saved Model
 # -----------------------
-MODEL_PATH = "models/XGBoost.pkl"  # change to your best model
+MODEL_PATH = "XGBoost.pkl"  # change to your best model
 
 with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
@@ -124,3 +124,4 @@ if st.button("Predict Quality"):
     if len(df_input) > 1:
         st.write("### Prediction Distribution")
         st.bar_chart(df_input['prediction'].value_counts().sort_index())
+
